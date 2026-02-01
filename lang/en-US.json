@@ -1,0 +1,15 @@
+{
+	"languageTag": "en-US",
+	"fileDescription": "Strings for the 'FXAA' effect.",
+	"text": {
+		"effects": {
+			"mikal_fxaa": {
+				"name": "FXAA",
+				"description": "FXAA from https://www.shadertoy.com/view/4tf3D8 by  4rknova",
+				"parameters": {
+
+				}
+			}
+		}
+	}
+}
