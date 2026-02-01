@@ -5,7 +5,7 @@
 		"effects": {
 			"pablogalbraith_fxaa": {
 				"name": "FXAA",
-				"description": "An FXAA (Fast Approximate Anti-Aliasing) implementation for reducing aliasing artifacts in images.",
+				"description": "An FXAA (Fast Approximate Anti-Aliasing) implementation for reducing aliasing artifacts. Supports WebGL and WebGPU renderers.",
 				"parameters": {}
 			}
 		}

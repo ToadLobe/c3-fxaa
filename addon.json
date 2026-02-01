@@ -7,11 +7,11 @@
 		"webgl",
 		"webgpu"
 	],
-	"version": "1.0.0.0",
+	"version": "1.0.0",
 	"author": "Pablo Galbraith",
 	"website": "https://www.construct.net",
 	"documentation": "https://www.construct.net",
-	"description": "An FXAA (Fast Approximate Anti-Aliasing) implementation for reducing aliasing artifacts in images.",
+	"description": "An FXAA (Fast Approximate Anti-Aliasing) implementation for reducing aliasing artifacts. Supports WebGL and WebGPU renderers.",
 	"file-list": [
 		"lang/en-US.json",
 		"addon.json",
