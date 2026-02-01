@@ -3,12 +3,10 @@
 	"fileDescription": "Strings for the 'FXAA' effect.",
 	"text": {
 		"effects": {
-			"mikal_fxaa": {
+			"pablogalbraith_fxaa": {
 				"name": "FXAA",
-				"description": "FXAA from https://www.shadertoy.com/view/4tf3D8 by  4rknova",
-				"parameters": {
-
-				}
+				"description": "An FXAA (Fast Approximate Anti-Aliasing) implementation for reducing aliasing artifacts in images.",
+				"parameters": {}
 			}
 		}
 	}
