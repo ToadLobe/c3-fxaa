@@ -4,7 +4,8 @@
 	"name": "FXAA",
 	"id": "PabloGalbraith_FXAA",
 	"supported-renderers": [
-		"webgl"
+		"webgl",
+		"webgpu"
 	],
 	"version": "1.0.0.0",
 	"author": "Pablo Galbraith",
@@ -14,7 +15,8 @@
 	"file-list": [
 		"lang/en-US.json",
 		"addon.json",
-		"effect.fx"
+		"effect.fx",
+		"effect.wgsl"
 	],
 	"category": "other",
 	"blends-background": false,
@@ -23,8 +25,8 @@
 	"animated": false,
 	"must-predraw": false,
 	"extend-box": {
-		"horizontal": 8,
-		"vertical": 8
+		"horizontal": 0,
+		"vertical": 0
 	},
 	"parameters": []
 }

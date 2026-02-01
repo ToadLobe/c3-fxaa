@@ -1,10 +1,12 @@
 /////////////////////////////////////////////////////////
 // FXAA
+
 precision mediump float;
 varying mediump vec2 vTex; // The current foreground texture co-ordinate
 uniform lowp sampler2D samplerFront; // The foreground texture sampler, to be sampled at vTex
 uniform mediump vec2 pixelSize; // The size of a texel in the foreground texture in texture co-ordinates
 
+// Luma coefficients for edge detection
 const vec3 luma = vec3(0.299, 0.587, 0.114);
 
 vec4 fxaa(vec2 p) {
@@ -45,7 +47,9 @@ vec4 fxaa(vec2 p) {
   return vec4(finalRgb, rgbaM.a);
 }
 
-// Code by Pablo Galbraith, Nikos Papadopoulos & 4rknova
+// Refactored by Pablo Galbraith
+// Ported by Nikos Papadopoulos
+// Shader written by 4rknova
 
 void main() {
   gl_FragColor = fxaa(vTex);
