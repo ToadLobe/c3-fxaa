@@ -16,15 +16,15 @@
 		"addon.json",
 		"effect.fx"
 	],
-	"category": "color",
+	"category": "other",
 	"blends-background": false,
-	"cross-sampling": false,
+	"cross-sampling": true,
 	"preserves-opaqueness": false,
 	"animated": false,
 	"must-predraw": false,
 	"extend-box": {
-		"horizontal": 0,
-		"vertical": 0
+		"horizontal": 8,
+		"vertical": 8
 	},
 	"parameters": []
 }
