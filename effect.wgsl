@@ -1,15 +1,10 @@
 /////////////////////////////////////////////////////////
 // FXAA
 
-// Foreground texture and sampler bindings
-%%TEXTUREFRONT_BINDING%%
-%%SAMPLERFRONT_BINDING%%
-
-// Construct-provided parameters and utilities
+%%TEXTUREFRONT_BINDING%% var textureFront : texture_2d<f32>;
+%%SAMPLERFRONT_BINDING%% var samplerFront : sampler;
 %%C3PARAMS_STRUCT%%
 %%C3_UTILITY_FUNCTIONS%%
-
-// Fragment shader input/output
 %%FRAGMENTINPUT_STRUCT%%
 %%FRAGMENTOUTPUT_STRUCT%%
 
