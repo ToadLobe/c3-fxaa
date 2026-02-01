@@ -25,10 +25,12 @@ fn fxaa(p: vec2<f32>) -> vec4<f32> {
   const BLEND_3 : f32 = -0.5;
 
   // Step 1: Edge Detection
-  let rgbNW : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(-1.0, -1.0) * c3_pixelSize).rgb;
-  let rgbNE : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(1.0, -1.0) * c3_pixelSize).rgb;
-  let rgbSW : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(-1.0, 1.0) * c3_pixelSize).rgb;
-  let rgbSE : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(1.0, 1.0) * c3_pixelSize).rgb;
+  let pixelSize : vec2<f32> = c3_getPixelSize(textureFront);
+
+  let rgbNW : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(-1.0, -1.0) * pixelSize).rgb;
+  let rgbNE : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(1.0, -1.0) * pixelSize).rgb;
+  let rgbSW : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(-1.0, 1.0) * pixelSize).rgb;
+  let rgbSE : vec3<f32> = textureSample(textureFront, samplerFront, p + vec2<f32>(1.0, 1.0) * pixelSize).rgb;
   let rgbaM : vec4<f32> = textureSample(textureFront, samplerFront, p);
   let rgbM : vec3<f32> = rgbaM.rgb;
 
@@ -45,7 +47,7 @@ fn fxaa(p: vec2<f32>) -> vec4<f32> {
   let lumaSum : f32 = lumaNW + lumaNE + lumaSW + lumaSE;
   let dirReduce : f32 = max(lumaSum * (0.25 * FXAA_REDUCE_MUL), FXAA_REDUCE_MIN);
   let rcpDirMin : f32 = 1.0 / (min(abs(dir.x), abs(dir.y)) + dirReduce);
-  dir = min(vec2<f32>(FXAA_SPAN_MAX), max(vec2<f32>(-FXAA_SPAN_MAX), dir * rcpDirMin)) * c3_pixelSize;
+  dir = min(vec2<f32>(FXAA_SPAN_MAX), max(vec2<f32>(-FXAA_SPAN_MAX), dir * rcpDirMin)) * pixelSize;
 
   // Step 2: Blend Samples
   let rgbA : vec3<f32> = 0.5 * (textureSample(textureFront, samplerFront, p + dir * BLEND_1).rgb + textureSample(textureFront, samplerFront, p + dir * BLEND_2).rgb);
