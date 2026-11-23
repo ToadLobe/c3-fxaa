@@ -9,8 +9,8 @@
 	],
 	"version": "1.0.0",
 	"author": "Pablo Galbraith",
-	"website": "https://www.construct.net",
-	"documentation": "https://www.construct.net",
+	"website": "https://www.construct.net/en/make-games/addons/1566/fxaa",
+	"documentation": "https://github.com/ToadLobe/c3-fxaa",
 	"description": "An FXAA (Fast Approximate Anti-Aliasing) implementation for reducing aliasing artifacts. Supports WebGL and WebGPU renderers.",
 	"file-list": [
 		"lang/en-US.json",
